@@ -8,7 +8,9 @@ public class CalculateController {
 
     SubstractionService subtraction = new SubstractionService(); // экземпляр сервиса Вычитания
 
-    MultiplyService multiply = new MultiplyService();
+    MultiplyService multiply = new MultiplyService(); // экземпляр сервиса Умножения
+
+    DevideService devide = new DevideService(); // экземпляр сервиса Деления
 
     CreateComplexNumber number = new CreateComplexNumber(); // экземпляр Создания комплексного числа
 
@@ -27,6 +29,12 @@ public class CalculateController {
 // Метод Умножения
     public ComplexNumber getMultiply(ComplexNumber z1, ComplexNumber z2) {
         ComplexNumber result = multiply.getCalculate(z1, z2);
+        return result;
+    }
+
+// Метод Деления
+    public ComplexNumber getDevide(ComplexNumber z1, ComplexNumber z2) {
+        ComplexNumber result = devide.getCalculate(z1, z2);
         return result;
     }
 }
